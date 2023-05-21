@@ -21,7 +21,7 @@ to work.
 pip install black
 ```
 
-## Useage
+## Usage
 
 Addins \> PYBLACK \> Style selection with black
 
