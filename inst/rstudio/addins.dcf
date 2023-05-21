@@ -1,0 +1,4 @@
+Name: Style selection with black
+Description: Style selected Python code with black
+Binding: style_black
+Interactive: true

@@ -1,5 +1,17 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # pyblack
 
@@ -10,14 +22,13 @@ Style Python code blocks with [black](https://github.com/psf/black).
 
 ## Installation
 
-``` r
+```r
 devtools::install_github("erictleung/pyblack")
 ```
 
-Requirements
+## Useage
 
-    magrittr
-    rstudioapi
+Addins > 
 
 ## License
 
