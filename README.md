@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Style Python code blocks with [black](https://github.com/psf/black).
+Style Python code blocks with [black](https://github.com/psf/black) in
+RStudio.
 
 ## Installation
 
@@ -23,7 +24,11 @@ pip install black
 
 ## Usage
 
-Addins \> PYBLACK \> Style selection with black
+In your text editor, highlight the relevant Python code you wish to
+format.
+
+Then navigate in RStudio to Addins \> PYBLACK \> Style selection with
+black.
 
 ## License
 
