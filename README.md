@@ -9,6 +9,9 @@
 Style Python code blocks with [black](https://github.com/psf/black) in
 RStudio.
 
+![Demo of the pyblack RStudio addin to help format Python code in
+RMarkdown](man/figures/pyblack.gif)
+
 ## Installation
 
 ``` r
