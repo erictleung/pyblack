@@ -30,6 +30,7 @@ style_black <- function() {
   ))
 
   if (!is.null(attr(x, "status"))) {
+    message("Make sure your code is still valid Python.")
     stop("Failed to reformat.")
   }
 
