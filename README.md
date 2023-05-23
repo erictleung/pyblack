@@ -4,6 +4,8 @@
 # pyblack
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/erictleung/pyblack/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/erictleung/pyblack/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Style Python code blocks with [black](https://github.com/psf/black) in
