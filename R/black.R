@@ -43,7 +43,12 @@ style_black <- function() {
     id = capture[["id"]])
 }
 
-#' TODO
+#' TODO Style entire active file
+#'
+#' Assumes file is a standard RMarkdown or Quarto document with Python-labeled
+#' codeblocks.
+#'
+#' Inspiration: https://github.com/r-lib/styler/blob/main/R/addins.R#L50
 style_active_file_black <- function() {
   if(Sys.which("black") == ""){
     stop(
@@ -55,4 +60,6 @@ style_active_file_black <- function() {
   # Grab code highlighted
   capture <- rstudioapi::getSourceEditorContext()
   capture
+
+  # Parse through document to extract only Python code blocks
 }
