@@ -26,7 +26,7 @@ Style Python code blocks with [black](https://github.com/psf/black) in RStudio.
 ## Installation
 
 ```r
-devtools::install_github("erictleung/pyblack")
+remotes::install_github("erictleung/pyblack")
 ```
 
 You must have black installed and accessible in your path for this addin to

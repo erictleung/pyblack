@@ -17,7 +17,7 @@ RMarkdown](man/figures/pyblack.gif)
 ## Installation
 
 ``` r
-devtools::install_github("erictleung/pyblack")
+remotes::install_github("erictleung/pyblack")
 ```
 
 You must have black installed and accessible in your path for this addin
