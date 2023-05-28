@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/erictleung/pyblack/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/erictleung/pyblack/actions/workflows/R-CMD-check.yaml)
+[![Project Type Toy
+Badge](https://img.shields.io/badge/project%20type-toy-blue)](https://project-types.github.io/#toy)
 <!-- badges: end -->
 
 Style Python code blocks with [black](https://github.com/psf/black) in
