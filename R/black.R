@@ -24,9 +24,16 @@ style_black <- function() {
   # Run black on temporary file
   tmpFile <- tempfile(fileext = ".py")
   writeLines(code, tmpFile)
+  black_config <- normalizePath(file.path(getwd(), "pyproject.toml"))
   x <- suppressWarnings(system2(
-    "black", tmpFile,
-    stdout = TRUE, stderr = TRUE
+    "black",
+    c(
+      "-v",  # Return more verbose stdout and stderr, used for troubleshooting
+      paste("--config", black_config, sep = " "),  # Use working dir config
+      tmpFile
+    ),
+    stdout = TRUE,
+    stderr = TRUE
   ))
 
   if (!is.null(attr(x, "status"))) {
