@@ -42,6 +42,24 @@ In your text editor, highlight the relevant Python code you wish to format.
 
 Then navigate in RStudio to Addins > PYBLACK > Style selection with black.
 
+## Configuration
+
+In your working directory, you can have a `pyproject.toml` file that `black`
+will read.
+
+Below is an example `pyproject.toml` file that changes the line-length from the
+default of 88 to 80.
+
+```
+[tool.black]
+line-length = 80
+```
+
+Other settings available to change can be found by running `black --help`.
+
+You can read more about this
+[here](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-format).
+
 ## License
 
 MIT
