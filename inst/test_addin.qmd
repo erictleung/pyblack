@@ -1,71 +1,77 @@
 ---
-title: "R Notebook"
+title: "Test Addin in Quarto Document"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+Below is some messy Python code using simple definition and if-else statements.
 
 ```{python}
-1    + 2
+from seven_dwwarfs import Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey, Doc
+x = {  'a':37,'b':42,
 
-print(    "This is a text file"   )
-x = {'a':    3, 'b'   : 4,
-'c': 2, 'd': 200
-
-
-
-}
+'c':927}
+x = 123456789.123456789E123456789
+if very_long_variable_name is not None and very_long_variable_name.field > 0 or very_long_variable_name.is_debug:
+ z = 'hello '+'world'
+else:
+ world = 'world'
+ a = 'hello {}'.format(world)
+ f = rf'hello {world}'
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+Below is some more messy Python code using a class definition.
 
 ```{python}
-1    + 2
-
-print(    "This is a text file"   )
-x = {'a':    3, 'b'   : 4,
-'c': 2, 'd': 200
-
-
-
-}
+if (this
+and that): y = 'hello ''world'
+class Foo  (     object  ):
+  def f    (self   ):
+    return       37*-2
+  def g(self, x,y=42):
+      return y
+  def f  (   a: List[ int ]) :
+   return      37-a[42-u :  y**3]
+  def very_important_function(template: str,*variables,file: os.PathLike,debug:bool=False,):
+    """Applies `variables` to the `template` and writes to `file`."""
+    with open(file, "w") as f:
+       print("hello")
 ```
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+Demonstrate using comments to help change how black formats the code.
 
 ```{python}
-1    + 2
-
-print(    "This is a text file"   )
-x = {'a':    3, 'b'   : 4,
-'c': 2, 'd': 200
-
-
-
-}
+# fmt: off
+custom_formatting = [
+    0,  1,  2,
+    3,  4,  5,
+    6,  7,  8,
+]
+# fmt: on
+custom_formatting = [
+    0,  1,  2,
+    3,  4,  5,
+    6,  7,  8,
+]
 ```
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+Below are just some more Python blocks to show it covers all Python code blocks
+and not R code blocks.
 
-```{python}
-1    + 2
+```{r}
+library(dplyr)
+library(palmerpenguins)
 
-print(    "This is a text file"   )
-x = {'a':    3, 'b'   : 4,
-'c': 2, 'd': 200
-
-
-
-}
+penguins %>% 
+  filter(species == "Adelie") %>%
+  summary()
 ```
 
-
 ```{python}
+#| echo: true
+
 1    + 2
 
-print(    "This is a text file"   )
+print(    "This is some text"   )
 x = {'a':    3, 'b'   : 4,
 'c': 2, 'd': 200
 
