@@ -4,7 +4,7 @@
 #'
 #' @param code character text of Python code
 #'
-#' @return character formatted Python code
+#' @returns character formatted Python code
 style_black <- function(code) {
   # Write code into temporary file
   tmpFile <- tempfile(fileext = ".py")
@@ -43,6 +43,8 @@ style_black <- function(code) {
 
 
 #' Apply black formatting to highlighted code
+#'
+#' @returns None
 #'
 #' @importFrom magrittr %>% extract2
 style_black_selection <- function() {
@@ -106,7 +108,7 @@ style_black_selection <- function() {
 #' Assumes file is a standard RMarkdown or Quarto document with Python-labeled
 #' code blocks.
 #'
-#' Inspiration: https://github.com/r-lib/styler/blob/main/R/addins.R#L50
+#' Code credit: Alex Rossell Hayes (https://github.com/rossellhayes)
 style_active_file_black <- function() {
   # Grab file name of open file
   capture <- rstudioapi::getSourceEditorContext()
