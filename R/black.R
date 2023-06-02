@@ -48,7 +48,7 @@ style_black <- function(code) {
 #'
 #' @importFrom magrittr %>% extract2
 style_black_selection <- function() {
-  if(Sys.which("black") == ""){
+  if (Sys.which("black") == "") {
     stop(
       "This function requires `black`. ",
       "Either it is not installed, or it is not found."
@@ -72,6 +72,7 @@ style_black_selection <- function() {
     text = contents,
     id = capture[["id"]])
 }
+
 
 #' Style entire active file
 #'
