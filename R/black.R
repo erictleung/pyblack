@@ -85,7 +85,7 @@ style_active_file_black <- function() {
   file <- capture$path
 
   # Read in Markdown file
-  document <- parsermd::parse_rmd(file, , parse_yaml = FALSE)
+  document <- parsermd::parse_rmd(file, parse_yaml = FALSE)
 
   # Parse Python code blocks and style it with black
   document <- purrr::modify_if(
