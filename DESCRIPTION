@@ -10,6 +10,8 @@ Description: RStudio addin to help format and style Python code in
 License: MIT + file LICENSE
 Imports:
     magrittr,
+    parsermd,
+    purrr,
     rstudioapi (>= 0.4)
 Encoding: UTF-8
 LazyData: true
