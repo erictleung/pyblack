@@ -2,10 +2,16 @@
 % Please edit documentation in R/black.R
 \name{style_black}
 \alias{style_black}
-\title{Apply black formatting to highlighted code}
+\title{Style Python Code directly}
 \usage{
-style_black()
+style_black(code)
+}
+\arguments{
+\item{code}{character text of Python code}
+}
+\value{
+character formatted Python code
 }
 \description{
-Apply black formatting to highlighted code
+Takes Python code directly into the function and formats it with black.
 }
