@@ -39,9 +39,18 @@ pip install black
 
 ## Usage
 
-In your text editor, highlight the relevant Python code you wish to format.
+This addin supports styling with black by:
 
-Then navigate in RStudio to Addins > PYBLACK > Style selection with black.
+- highlighted selected code
+- entire active file in RStudio
+
+**For select code**, in your text editor, first highlight the relevant Python
+code you wish to format. Then navigate in RStudio to Addins > PYBLACK > Style
+selection with black.
+
+**For formatting an entire active document**, in your text editor, have your
+cursor in an open document you want to format. Then navigate in RStudio to
+Addins > PYBLACK > Style active file with black.
 
 ## Configuration
 
