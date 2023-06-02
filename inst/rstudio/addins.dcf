@@ -1,4 +1,9 @@
 Name: Style selection with black
 Description: Style selected Python code with black
-Binding: style_black
+Binding: style_black_selection
+Interactive: true
+
+Name: Style active file with black
+Description: Style active RMarkdown or Quarto Python code blocks with black
+Binding: style_active_file_black
 Interactive: true
