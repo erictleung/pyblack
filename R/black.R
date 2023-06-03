@@ -125,3 +125,50 @@ style_active_file_black <- function() {
 
   writeLines(parsermd::as_document(document), file)
 }
+
+
+#' Replace Python indentation from 4 to 2
+#'
+#' To give another option for consistency if you want to use 2 spaces for Python
+#'
+#' @returns None
+#'
+#' @importFrom utils tail
+style_python_two_spaces <- function() {
+  # Grab file name of open file
+  capture <- rstudioapi::getSourceEditorContext()
+  file <- capture$path
+
+  # Read in Markdown file
+  document <- parsermd::parse_rmd(file, parse_yaml = FALSE)
+
+  # Remove trailing new line in Markdown if it exists, otherwise, every time
+  # this is run, an extra new line is added after Markdown text
+  document <- purrr::modify_if(
+    document,
+    .p = function(chunk) {
+      inherits(chunk, "rmd_markdown") &&
+        (parsermd::rmd_node_length(chunk) > 1) &&
+        (tail(chunk, n = 1) == "")
+    },
+    .f = function(chunk) {
+      out_chunk <- head(chunk, length(chunk) - 1)
+      attr(out_chunk, "class") <- "rmd_markdown"
+      out_chunk
+    }
+  )
+
+  # Parse Python code blocks and style it with black
+  document <- purrr::modify_if(
+    document,
+    .p = function(chunk) {
+      inherits(chunk, "rmd_chunk") && identical(chunk$engine, "python")
+    },
+    .f = function(chunk) {
+      chunk$code <- stringr::str_replace(chunk$code, '^( +)\\1 ', '\\1')
+      chunk
+    }
+  )
+
+  writeLines(parsermd::as_document(document), file)
+}

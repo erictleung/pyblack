@@ -7,3 +7,8 @@ Name: Style active file with black
 Description: Style active RMarkdown or Quarto Python code blocks with black
 Binding: style_active_file_black
 Interactive: true
+
+Name: Reindent active file with 2 spaces
+Description: Reindent active file's Python code blocks from a 4 to 2 spaces
+Binding: style_python_two_spaces
+Interactive: true
