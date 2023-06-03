@@ -90,6 +90,22 @@ style_active_file_black <- function() {
   # Read in Markdown file
   document <- parsermd::parse_rmd(file, parse_yaml = FALSE)
 
+  # Remove trailing new line in Markdown if it exists, otherwise, every time
+  # this is run, an extra new line is added after Markdown text
+  document <- purrr::modify_if(
+    document,
+    .p = function(chunk) {
+      inherits(chunk, "rmd_markdown") &&
+        (parsermd::rmd_node_length(chunk) > 1) &&
+        (tail(chunk, n = 1) == "")
+    },
+    .f = function(chunk) {
+      out_chunk <- head(chunk, length(chunk) - 1)
+      attr(out_chunk, "class") <- "rmd_markdown"
+      out_chunk
+    }
+  )
+
   # Parse Python code blocks and style it with black
   document <- purrr::modify_if(
     document,
