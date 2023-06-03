@@ -110,7 +110,12 @@ style_active_file_black <- function() {
   document <- purrr::modify_if(
     document,
     .p = function(chunk) {
-      inherits(chunk, "rmd_chunk") && identical(chunk$engine, "python")
+      inherits(chunk, "rmd_chunk") &&
+        identical(chunk$engine, "python") &&
+        # Check whether code chunk explicitly says `black = FALSE`
+        ifelse(is.null(chunk$options$black),
+               TRUE,
+               as.logical(chunk$options$black))
     },
     .f = function(chunk) {
       chunk$code <- style_black(chunk$code)
