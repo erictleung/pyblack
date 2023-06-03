@@ -3,3 +3,5 @@
 export("%>%")
 importFrom(magrittr,"%>%")
 importFrom(magrittr,extract2)
+importFrom(utils,head)
+importFrom(utils,tail)

@@ -80,6 +80,8 @@ style_black_selection <- function() {
 #' code blocks.
 #'
 #' Code credit: Alex Rossell Hayes (https://github.com/rossellhayes)
+#'
+#' @importFrom utils head tail
 style_active_file_black <- function() {
   # Grab file name of open file
   capture <- rstudioapi::getSourceEditorContext()
