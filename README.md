@@ -61,6 +61,40 @@ Other settings available to change can be found by running
 You can read more about this
 [here](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-format).
 
+## Conditionally apply formatting
+
+There are two ways to tell black to apply formatting to a code block:
+
+1.  Use `# fmt: off` before a block of code
+2.  Use `black = FALSE` in chunk options
+
+For example, black won’t format the `custom_formatting` object, but will
+format the `black_formatting` object.
+
+``` python
+# fmt: off
+custom_formatting = [
+    0,  1,  2,
+    3,  4,  5,
+    6,  7,  8,
+]
+# fmt: on
+black_formatting = [
+    0,  1,  2,
+    3,  4,  5,
+    6,  7,  8,
+]
+```
+
+Another way to avoid formatting an entire code block is to set
+`black = FALSE` in the code chunk.
+
+```` default
+```{python, black = FALSE}
+
+```
+````
+
 ## License
 
 MIT
