@@ -10,8 +10,8 @@
 Badge](https://img.shields.io/badge/project%20type-toy-blue)](https://project-types.github.io/#toy)
 <!-- badges: end -->
 
-Style Python code blocks with [black](https://github.com/psf/black) in
-RStudio.
+RStudio addin to style Python code blocks with
+[black](https://github.com/psf/black).
 
 ![Demo of the pyblack RStudio addin to help format Python code in
 RMarkdown](man/figures/pyblack.gif)
@@ -43,6 +43,9 @@ PYBLACK \> Style selection with black.
 **For formatting an entire active document**, in your text editor, have
 your cursor in an open document you want to format. Then navigate in
 RStudio to Addins \> PYBLACK \> Style active file with black.
+
+There is a third option available to change indentation from 4 spaces to
+2 spaces. This does not require or use black to work.
 
 ## Configuration
 
